@@ -1,0 +1,25 @@
+@import 'variables';
+
+.theme-blue {
+  .topbar {
+    background-color: $blue_C700;
+    color: $white;
+    .nav-item a {
+      color: $white;
+    }
+    .navbar-brand {
+      color: $white;
+    }
+  }
+
+  .leftsidebar aside {
+    background-color: red;
+  }
+
+  .maincontent {
+    header {
+      background-color: $blue_C100;
+    }
+    background-color: green;
+  }
+}
