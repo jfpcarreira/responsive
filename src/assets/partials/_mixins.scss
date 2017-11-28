@@ -11,3 +11,9 @@
       -ms-box-shadow: $hor $ver $spread rgba(0, 0, 0, 0.3);
           box-shadow: $hor $ver $spread rgba(0, 0, 0, 0.3);
 }
+
+@mixin text-overflow($type) {
+  -ms-text-overflow: $type;
+   -o-text-overflow: $type;
+      text-overflow: $type;
+}

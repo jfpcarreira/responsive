@@ -12,8 +12,19 @@
     }
   }
 
-  .leftsidebar aside {
-    background-color: red;
+  .leftsidebar {
+    .userinfo {
+      .image {
+        img {
+          border-color: $blue_C500;
+        }
+      }
+      .info-container {
+        .user-helper-dropdown {
+          color: $white;
+        }
+      }
+    }
   }
 
   .maincontent {
@@ -23,5 +34,12 @@
     main {
       background-color: white;
     }
+  }
+}
+
+.theme-red {
+  .topbar {
+    background-color: $red_C700;
+    color: $white;
   }
 }
