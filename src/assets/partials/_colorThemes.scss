@@ -25,14 +25,49 @@
         }
       }
     }
+
+    .menu {
+      .scrollbar {
+        background-color: $grey_C100;
+      }
+      .scrollbar::-webkit-scrollbar-thumb {
+        background-color: $amber_A400;
+      }
+      .scrollbar::-webkit-scrollbar-track {
+        background-color: $grey_C100;
+      }
+    }
+
+    .footer {
+      background-color: $blue_C700;
+
+      .col-4 {
+        a {
+          color: $white;
+        }
+      }
+
+      .col-4:nth-child(2) {
+        border-left: 1px solid $grey_C200;
+        border-right: 1px solid $grey_C200;
+      }
+    }
   }
 
   .maincontent {
     header {
       background-color: $blue_C100;
+
+      .row {
+        background: $white;
+
+        h3 {
+          color: $blue_C600 !important;
+        }
+      }
     }
     main {
-      background-color: white;
+      background-color: $white;
     }
   }
 }

@@ -1,14 +1,15 @@
 @import '../../../../assets/partials/mixins';
 
 .leftsidebar aside {
+  @include box-shadow(1px, 0px, 5px);
   width: 300px;
+  height: calc(100vh - 70px);
   overflow: hidden;
   display: inline-block;
-  height: calc(100vh - 70px);
   position: fixed;
-  @include box-shadow(1px, 0px, 5px);
 
   .userinfo {
+    @include box-shadow(0px, 1px, 5px);
     padding: 15px;
     white-space: nowrap;
     position: relative;
@@ -20,9 +21,9 @@
       display: inline-block;
 
       img {
+        @include border-radius(50%);
         width: 90px;
         height: 90px;
-        @include border-radius(50%);
         border-style: inset;
         border-width: 5px;
         vertical-align: bottom !important;
@@ -36,16 +37,16 @@
       top: 15px;
 
       .name {
-        white-space: nowrap;
         @include text-overflow(ellipsis);
+        white-space: nowrap;
         overflow: hidden;
         font-size: 14px;
         max-width: 200px;
       }
 
       .email {
-        white-space: nowrap;
         @include text-overflow(ellipsis);
+        white-space: nowrap;
         overflow: hidden;
         font-size: 12px;
         max-width: 200px;
@@ -64,15 +65,39 @@
     overflow: auto;
     width: auto;
     height: calc(100vh - 280px);
+
+    .scrollbar {
+      float: left;
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+      width: 5px;
+/*
+      $optionsSize: 15 * 50px;
+      $scrollSize: calc(100vh - 280px);
+      @if( $optionsSize > $scrollSize ) {
+        width: 5px;
+      } @else {
+        width: 0px;
+      }
+*/
+    }
   }
 
   .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #eee;
-    padding: 15px;
+    padding: 5px 0px 5px 0px;
     overflow: hidden;
-    height: 60px;
+    height: 40px;
+
+    .col-4 {
+      padding-top: 2px;
+      text-align: center;
+    }
   }
 }
