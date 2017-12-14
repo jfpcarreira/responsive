@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 .theme-blue {
   .topbar {
@@ -44,6 +45,11 @@
       .col-4 {
         a {
           color: $white;
+          @include transition(color 2s);
+        }
+
+        a:hover {
+          color: $amber_A400;
         }
       }
 

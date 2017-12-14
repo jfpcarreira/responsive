@@ -1,4 +1,4 @@
-@import '../../../../assets/partials/mixins';
+@import '../../../../partials/mixins';
 
 .leftsidebar aside {
   @include box-shadow(1px, 0px, 5px);
@@ -15,6 +15,7 @@
     position: relative;
     background: url(/assets/images/user_bg_2.jpg) no-repeat no-repeat;
     height: 170px;
+    z-index: 10;
 
     .image {
       margin-right: 12px;
@@ -66,24 +67,29 @@
     width: auto;
     height: calc(100vh - 280px);
 
+    .list-group-item:first-child {
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0rem;
+    }
+
+    .list-group-item:last-child {
+      border-bottom-right-radius: 0rem;
+      border-bottom-left-radius: 0rem;
+    }
+
     .scrollbar {
       float: left;
       height: 100%;
       width: 100%;
-      overflow-y: scroll;
+      overflow-y: overlay;
     }
 
     .scrollbar::-webkit-scrollbar {
-      width: 5px;
-/*
-      $optionsSize: 15 * 50px;
-      $scrollSize: calc(100vh - 280px);
-      @if( $optionsSize > $scrollSize ) {
-        width: 5px;
-      } @else {
-        width: 0px;
-      }
-*/
+      display: none;
+    }
+
+    .scrollbar:hover::-webkit-scrollbar {
+      display: inline;
     }
   }
 
