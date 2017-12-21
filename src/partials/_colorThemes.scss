@@ -30,6 +30,11 @@
     .menu {
       .scrollbar {
         background-color: $grey_C100;
+
+        .list-group-item.active {
+          background-color: $blue_A400;
+          border-color: $blue_A400;
+      }
       }
       .scrollbar::-webkit-scrollbar-thumb {
         background-color: $amber_A400;

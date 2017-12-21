@@ -5,8 +5,12 @@
 .maincontent {
   margin-left: 300px;
 
+  main {
+    padding: 10px;
+  }
+
   footer {
     background-color: red;
-    padding: 15px;
+    padding: 8px;
   }
 }

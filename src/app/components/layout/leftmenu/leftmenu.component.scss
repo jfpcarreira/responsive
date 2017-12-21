@@ -87,9 +87,12 @@
     .scrollbar::-webkit-scrollbar {
       display: none;
     }
-
     .scrollbar:hover::-webkit-scrollbar {
       display: inline;
+    }
+    .scrollbar::-webkit-scrollbar-thumb {
+      @include border-radius(10px);
+      width: 1px;
     }
   }
 
